@@ -1,7 +1,7 @@
 const { Client } = require('../models');
 
 module.exports = {
-    // Get all clients
+    // Get all clients (Working)
     async getAllClients(req, res) {
         try {
             const clients = await Client.find();
@@ -11,7 +11,7 @@ module.exports = {
             res.status(500).json(err.message);
         }
     },
-    // Get client by ID
+    // Get client by ID (Working)
     async getClientById(req, res) {
         try {
             const client = await Client.findOne({ _id: req.params.id });
@@ -26,7 +26,7 @@ module.exports = {
             res.status(500).json(err.message);
         }
     },
-    //  Create a client
+    //  Create a client (Working)
     async createClient(req, res) {
         try {
             const newClient = await Client.create(req.body);
