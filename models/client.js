@@ -26,7 +26,11 @@ const ClientSchema = new Schema(
         phoneNumber: {
             type: Number,
             match: [/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/, 'That is not a valid phone number']
-        }
+        },
+        // accounts:[ {
+        //     type: Schema.Types.ObjectId,
+        //     ref: 'Account'
+        // }],
     },
     {
         toJSON: {

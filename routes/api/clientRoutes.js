@@ -3,7 +3,7 @@ const router = require('express').Router();
 const {
     getAllClients,
     getClientById,
-    createClient
+    createClient,
 } = require('../../controllers/clientController');
 
 // /api/clients (Working)
